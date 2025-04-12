@@ -8,6 +8,7 @@ export const LoginPage = () => {
   const onLogin = () =>{
     login('Guseppe Rodriguez');
      navigate('/marvel',{ replace: true })
+     window.location.reload();
   }
   return (
     <div className="container">

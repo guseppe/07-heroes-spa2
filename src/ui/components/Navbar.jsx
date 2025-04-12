@@ -10,6 +10,7 @@ export const Navbar = () => {
     const onLogout = () =>{
         logout();
         navigate('/login', { replace: true });
+        window.location.reload();
     }
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
