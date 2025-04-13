@@ -3,8 +3,8 @@ import { AuthContext } from "../auth";
 import { Navigate, Outlet } from "react-router";
 
 export const PublicRoute = () => {
-  const { logged } = useContext(AuthContext); 
+  const { loggedIn } = useContext(AuthContext); 
   return (
-       (!logged) ? <Outlet/> : <Navigate to='/marvel'  /> 
+       (!loggedIn) ? <Outlet/> : <Navigate to='/marvel'  /> 
   )
 }

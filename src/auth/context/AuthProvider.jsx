@@ -6,7 +6,7 @@ import { types } from "../types/type"
 const init = () =>{
   const user = JSON.parse(localStorage.getItem("user"));
   return {
-    logged: !!user,
+    loggedIn: !!user,
     user: user
   }
 }
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children}) => {
   const logout = ()=>{
     localStorage.removeItem('user');
     const action = {
-       type: types.logout,
+      type: types.logout,
     }
     dispatch(action);
   }
