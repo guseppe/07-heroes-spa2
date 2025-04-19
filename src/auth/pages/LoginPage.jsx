@@ -8,8 +8,7 @@ export const LoginPage = () => {
   const onLogin = () =>{
     login('Guseppe Rodriguez');
      const lastPath = localStorage.getItem('lastPath') || '/';
-     navigate(lastPath,{ replace: true })
-     window.location.reload();
+     navigate(lastPath,{ replace: true });
   }
   return (
     <div className="container">

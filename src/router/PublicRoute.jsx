@@ -1,10 +1,9 @@
-import { useContext } from "react"
-import { AuthContext } from "../auth";
+
 import { Navigate, Outlet } from "react-router";
 
 export const PublicRoute = () => {
-  const { loggedIn } = useContext(AuthContext); 
+  const loggedIn = localStorage.getItem('user') != null ? true: false;
   return (
-       (!loggedIn) ? <Outlet/> : <Navigate to='/marvel'  /> 
+       (!loggedIn) ? <Outlet/> : <Navigate to='/marvel'/> 
   )
 }

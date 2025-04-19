@@ -13,7 +13,6 @@ export const Navbar = () => {
         logout();
         localStorage.setItem('lastPath', lastPath);
         navigate('/login', { replace: true });
-        window.location.reload();
     }
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
